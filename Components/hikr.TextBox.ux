@@ -1,0 +1,1 @@
+<TextBox ux:Class="hikr.TextBox" CaretColor="White" Padding="10, 10, 0, 10" TextColor="White"></TextBox>

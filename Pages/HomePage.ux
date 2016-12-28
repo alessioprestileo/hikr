@@ -1,0 +1,24 @@
+<hikr.Page ux:Class="HomePage">
+	<Router ux:Dependency="router"></Router>
+	<JavaScript File="HomePage.js"></JavaScript>
+	<DockPanel>
+		<hikr.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0, 50">
+			Recent Hikes
+		</hikr.Text>
+		<ScrollView>
+			<StackPanel>
+				<Rectangle ux:Class="Separator" Height="1" Fill="#fff4"></Rectangle>
+				<Each Items="{hikes}">
+					<Separator></Separator>
+					<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goToHike}">
+						<hikr.Text Margin="20" Value="{name}"></hikr.Text>
+						<WhilePressed>
+							<Scale Factor="0.95" Duration="0.08" Easing="QuadraticOut"></Scale>
+						</WhilePressed>
+					</Panel>
+				</Each>
+				<Separator></Separator>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</hikr.Page>
